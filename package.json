@@ -2,10 +2,10 @@
   "name": "irc-node",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "dependencies": {
     "express": "^4.17.1",
-    "express-longpoll": "0.0.6",
+    "express-longpoll": "^0.0.6",
     "node-static": "^0.7.11"
   },
   "devDependencies": {},
@@ -13,6 +13,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrrrrrw420/IRC.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wrrrrrw420/IRC/issues"
+  },
+  "homepage": "https://github.com/wrrrrrw420/IRC#readme"
 }
