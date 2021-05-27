@@ -1,8 +1,26 @@
+"use strict";
 const controller = new AbortController();
 const { signal } = controller;
 
 let user;
 let active = true;
+
+window.addEventListener("keydown", function (event) {
+    if (event.defaultPrevented) {
+        return;
+    }
+    switch (event.key) {
+        case "Enter":
+            sendMessage()
+            break;
+        default:
+            return;
+    }
+})
+
+// $(document).ready(function () {
+//     $('#scrollbar1').tinyscrollbar();
+// });
 
 function init() {
     const nick = prompt('Enter a nickname: ');
