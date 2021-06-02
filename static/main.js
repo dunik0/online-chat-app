@@ -3,7 +3,7 @@ import Chat from './components/Chat.js';
 import User from './components/User.js';
 
 export const controller = new AbortController();
-export let { signal } = controller;
+export const { signal } = controller;
 
 const nick = prompt('Enter a nickname: ');
 const user = new User(nick);
@@ -11,6 +11,7 @@ const chat = new Chat(user);
 chat.subscribe();
 
 $('#chat').niceScroll({ cursorborder: '0px' });
+$('#send').on('mouseup', () => { chat.sendMessage() })
 
 window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
