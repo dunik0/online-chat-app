@@ -59,6 +59,7 @@ async function subscribe() {
                 animate: false
             });
         })
+        updateScroll();
 
         await subscribe();
     } else if (active) {
@@ -98,6 +99,11 @@ function sendMessage() {
             });
         }
     }
+}
+
+function updateScroll() {
+    let element = document.querySelector('#chat');
+    element.scrollTop = element.scrollHeight;
 }
 
 class User {
