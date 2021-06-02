@@ -24,10 +24,12 @@ export default class User {
     }
     changeNickname(newName) {
         this.nick = newName;
+        alert('Changed nickaname to: ' + this.nick)
     }
     changeColor(newColor) {
         if (0 <= newColor && newColor <= 15) {
             this.color = this.colors[newColor];
+            alert('Changed color to: ' + this.color)
         } else {
             alert('Invalid input or number out of range')
         }

@@ -25,7 +25,6 @@ export default class Chat {
         if (message) {
             if (message[0] == '/') {
                 const messageArray = message.split(' ');
-                console.log(messageArray)
                 if (messageArray[0] == '/nick') {
                     messageArray.shift();
                     this.user.changeNickname(messageArray.join(' '));
