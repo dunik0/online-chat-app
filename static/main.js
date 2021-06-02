@@ -1,12 +1,12 @@
 "use strict";
 import Chat from './components/Chat.js';
-import User from './components/User.js';
+import ChatUser from './components/ChatUser.js';
 
 export const controller = new AbortController();
 export const { signal } = controller;
 
 const nick = prompt('Enter a nickname: ');
-const user = new User(nick);
+const user = new ChatUser(nick);
 const chat = new Chat(user);
 chat.subscribe();
 

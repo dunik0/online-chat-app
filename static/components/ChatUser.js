@@ -1,5 +1,5 @@
 import { controller } from '../main.js'
-export default class User {
+export default class ChatUser {
     constructor(nick) {
         this.nick = nick;
         this.colors = [
