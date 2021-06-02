@@ -1,7 +1,7 @@
 const express = require('express');
+const bodyParser = require("body-parser")
 const app = express();
 const longpoll = require("express-longpoll")(app, { DEBUG: true })
-const bodyParser = require("body-parser")
 const port = 8080;
 
 app.use(express.static('static'));
