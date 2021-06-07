@@ -1,12 +1,12 @@
 const express = require('express');
-const bodyParser = require("body-parser")
+// const bodyParser = require("body-parser")
 const app = express();
 const longpoll = require("express-longpoll")(app, { DEBUG: true })
 const port = 8080;
 
 app.use(express.static('static'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 longpoll.create('/subscribe');
 
