@@ -23,6 +23,7 @@
     width: 100%;
     height: 95%;
     background-color: rgb(171, 171, 171);
+    padding-left: 10px;
     /* overflow-y: hidden; */
 }
 
