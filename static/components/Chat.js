@@ -25,16 +25,21 @@ export default class Chat {
         if (message) {
             if (message[0] == '/') {
                 const messageArray = message.split(' ');
-                if (messageArray[0] == '/nick') {
-                    messageArray.shift();
-                    this.user.changeNickname(messageArray.join(' '));
-                } else if (messageArray[0] == '/color') {
-                    this.user.changeColor(messageArray[1])
-                } else if (messageArray[0] == '/quit') {
-                    this.active = false;
-                    this.user.quit();
-                } else {
-                    alert('Invalid command');
+                switch (messageArray[0]) {
+                    case '/nick':
+                        messageArray.shift();
+                        this.user.changeNickname(messageArray.join(' '));
+                        break;
+                    case '/color':
+                        this.user.changeColor(messageArray[1]);
+                        break;
+                    case '/quit':
+                        this.active = false;
+                        this.user.quit();
+                        break;
+                    default:
+                        alert('Invalid command');
+                        break;
                 }
             } else if (this.active) {
                 fetch('/publish', {
