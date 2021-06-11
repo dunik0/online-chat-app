@@ -20,7 +20,7 @@
 }
 
 #chat{
-    width: 100%;
+    width: calc(100vw - 10px);
     height: 95%;
     background-color: rgb(171, 171, 171);
     padding-left: 10px;
